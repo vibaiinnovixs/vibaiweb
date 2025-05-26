@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { ArrowLeft, Home, Briefcase, Code, Cpu, Layout, Rocket, Globe, Users, Heart } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface RefundTimelineItem {
   period: string;
@@ -42,9 +42,16 @@ const REFUND_TIMELINE: RefundTimelineItem[] = [
 ];
 
 const VcapPage: React.FC = () => {
+  const location = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (location.pathname === '/vcap') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+      });
+    }
+  }, [location]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
