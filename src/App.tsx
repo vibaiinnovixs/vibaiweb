@@ -10,8 +10,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/vcap" element={<VcapPage />} />
-  {/* <Route path="/faq" element={<FaqPage />} /> */}
+        <Route path="/faq" element={<FaqPage />} /> 
+        <Route path="/vcap" element={<VcapPage />} />        
       </Routes>
     </Router>
   );
