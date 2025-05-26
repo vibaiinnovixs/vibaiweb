@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ArrowLeft, Home, Briefcase, Code, Cpu, Layout, Rocket, Globe, Users, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -42,8 +42,12 @@ const REFUND_TIMELINE: RefundTimelineItem[] = [
 ];
 
 const VcapPage: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div id="top" className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <header className="bg-gradient-to-r from-indigo-900 to-purple-900 text-white py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -55,7 +59,7 @@ const VcapPage: React.FC = () => {
               Back to Home
             </Link>
             
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 animate-fade-in">
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">
               VCAP — Vibai Career Assurance Program
             </h1>
           </div>
@@ -66,7 +70,7 @@ const VcapPage: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-12">
             {/* Overview Section */}
-            <section className="bg-white rounded-2xl shadow-lg p-8 animate-slide-in">
+            <section className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
                 Start Your Tech Career from Home — No Degree, No Interviews.
               </h2>
@@ -76,7 +80,7 @@ const VcapPage: React.FC = () => {
             </section>
 
             {/* Why Work From Home Section */}
-            <section className="bg-white rounded-2xl shadow-lg p-8 animate-slide-in">
+            <section className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <Home className="w-6 h-6 mr-2 text-purple-600" />
                 Why Work From Home?
@@ -133,7 +137,7 @@ const VcapPage: React.FC = () => {
             </section>
 
             {/* Why Choose VCAP Section */}
-            <section className="bg-white rounded-2xl shadow-lg p-8 animate-slide-in">
+            <section className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <Rocket className="w-6 h-6 mr-2 text-purple-600" />
                 Why Choose VCAP?
@@ -168,7 +172,7 @@ const VcapPage: React.FC = () => {
             </section>
 
             {/* What You'll Work On Section */}
-            <section className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-slide-in">
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Domains</h3>
                 <ul className="space-y-3">
@@ -214,7 +218,7 @@ const VcapPage: React.FC = () => {
             </section>
 
             {/* Financial Transparency Section */}
-            <section className="bg-white rounded-2xl shadow-lg p-8 animate-slide-in">
+            <section className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Financial Transparency</h2>
               <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
@@ -246,7 +250,7 @@ const VcapPage: React.FC = () => {
             </section>
 
             {/* Security Deposit & Refund Section */}
-            <section className="bg-white rounded-2xl shadow-lg p-8 animate-slide-in">
+            <section className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Security Deposit & Refund</h2>
               <div className="mb-8">
                 <div className="flex items-center mb-4">
@@ -292,7 +296,7 @@ const VcapPage: React.FC = () => {
             </section>
 
             {/* Call to Action */}
-            <section className="bg-gradient-to-r from-purple-900 to-indigo-900 rounded-2xl shadow-lg p-8 text-center animate-scale-in">
+            <section className="bg-gradient-to-r from-purple-900 to-indigo-900 rounded-2xl shadow-lg p-8 text-center">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Ready to Start Your Journey?
               </h2>
