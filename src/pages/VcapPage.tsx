@@ -10,6 +10,233 @@ interface RefundTimelineItem {
   totalTakeaway: string;
 }
 
+interface DepartmentRole {
+  title: string;
+  description: string;
+}
+
+interface Department {
+  name: string;
+  roles: DepartmentRole[];
+}
+
+const DEPARTMENTS: Department[] = [
+  {
+    name: "Software Department",
+    roles: [
+      {
+        title: "AI Solutions Architect",
+        description: "Designs intelligent systems leveraging NLP, ML, and predictive modeling"
+      },
+      {
+        title: "Conversational Interface Developer",
+        description: "Develops AI chatbots and voice assistants"
+      },
+      {
+        title: "AI Code Auditor",
+        description: "Uses AI tools to analyze and enhance code quality and security"
+      },
+      {
+        title: "Intelligent QA Analyst",
+        description: "Automates test cases using AI to ensure software reliability"
+      },
+      {
+        title: "Smart Deployment Engineer",
+        description: "Manages CI/CD with AI optimization"
+      }
+    ]
+  },
+  {
+    name: "Hardware & IoT Department",
+    roles: [
+      {
+        title: "Edge AI Hardware Engineer",
+        description: "Builds devices with integrated edge AI processing"
+      },
+      {
+        title: "Autonomous Device Tester",
+        description: "Uses AI to simulate and test hardware functions"
+      },
+      {
+        title: "Sensor Data Intelligence Analyst",
+        description: "Analyzes real-time IoT data streams using AI models"
+      },
+      {
+        title: "AI Circuit Design Assistant",
+        description: "Aids in circuit planning with machine learning insights"
+      }
+    ]
+  },
+  {
+    name: "Mechanical & Enclosure Department",
+    roles: [
+      {
+        title: "AI-Driven Product Designer",
+        description: "Uses generative AI tools for 3D modeling and industrial design"
+      },
+      {
+        title: "Predictive Maintenance Analyst",
+        description: "Uses AI to forecast wear and maintenance schedules"
+      },
+      {
+        title: "Digital Twin Simulation Engineer",
+        description: "Builds simulation models using real-time data and AI"
+      },
+      {
+        title: "AI-Assisted Structural Analyst",
+        description: "Evaluates physical product integrity with machine learning"
+      }
+    ]
+  },
+  {
+    name: "Cloud & Data Department",
+    roles: [
+      {
+        title: "AI Data Pipeline Engineer",
+        description: "Builds and manages smart data flows for training and inference"
+      },
+      {
+        title: "Cognitive Data Steward",
+        description: "Monitors and curates training data for ethical and effective AI use"
+      },
+      {
+        title: "Smart Storage Architect",
+        description: "Designs AI-optimized cloud storage systems"
+      },
+      {
+        title: "AI Security Analyst",
+        description: "Protects systems using AI threat detection and pattern analysis"
+      }
+    ]
+  },
+  {
+    name: "UI/UX & Design Department",
+    roles: [
+      {
+        title: "Neuroadaptive UI Designer",
+        description: "Designs interfaces that adapt to user behavior using AI"
+      },
+      {
+        title: "AI-Powered UX Strategist",
+        description: "Uses analytics and AI models to optimize user experiences"
+      },
+      {
+        title: "Visual Intelligence Artist",
+        description: "Applies generative models to create dynamic content"
+      },
+      {
+        title: "Smart Accessibility Analyst",
+        description: "Enhances accessibility with AI recognition and personalization"
+      }
+    ]
+  },
+  {
+    name: "Business & Operations Department",
+    roles: [
+      {
+        title: "Autonomous Process Optimizer",
+        description: "Automates workflows using process mining and AI"
+      },
+      {
+        title: "Predictive Business Analyst",
+        description: "Forecasts trends, sales, and risks using AI insights"
+      },
+      {
+        title: "AI Contracts & Policy Manager",
+        description: "Manages smart contracts and AI-governed compliance"
+      },
+      {
+        title: "Operational Digital Twin Manager",
+        description: "Maintains real-time AI models of business systems"
+      }
+    ]
+  },
+  {
+    name: "HR & Talent Department",
+    roles: [
+      {
+        title: "AI Talent Acquisition Specialist",
+        description: "Uses AI to identify, screen, and onboard talent"
+      },
+      {
+        title: "Sentiment & Wellness Monitor",
+        description: "Uses AI to track team morale and engagement"
+      },
+      {
+        title: "Skill Gap AI Assessor",
+        description: "Detects and recommends upskilling using AI profiles"
+      },
+      {
+        title: "AI-Enhanced Training Architect",
+        description: "Designs AI-personalized learning programs"
+      }
+    ]
+  },
+  {
+    name: "Marketing & Sales Department",
+    roles: [
+      {
+        title: "Predictive Market Analyst",
+        description: "Uses AI to analyze demand and customer behavior"
+      },
+      {
+        title: "AI Content Generator",
+        description: "Crafts content using generative AI tools"
+      },
+      {
+        title: "Smart Campaign Manager",
+        description: "Designs and deploys AI-optimized marketing campaigns"
+      },
+      {
+        title: "Sales Intelligence Agent",
+        description: "Enhances CRM and lead qualification with AI"
+      }
+    ]
+  },
+  {
+    name: "Customer & Field Services",
+    roles: [
+      {
+        title: "AI Support Agent Supervisor",
+        description: "Oversees AI-based customer support systems"
+      },
+      {
+        title: "Automated Service Scheduler",
+        description: "Uses AI to assign field tasks efficiently"
+      },
+      {
+        title: "Voice & Intent Recognition Specialist",
+        description: "Enhances customer understanding with AI"
+      },
+      {
+        title: "Field Data AI Analyst",
+        description: "Gathers insights from customer interactions in real-time"
+      }
+    ]
+  },
+  {
+    name: "Finance & Legal Department",
+    roles: [
+      {
+        title: "Financial Pattern Predictor",
+        description: "Uses AI to detect anomalies and forecast performance"
+      },
+      {
+        title: "Smart Invoice & Audit Manager",
+        description: "Automates billing and audits with AI tools"
+      },
+      {
+        title: "AI Compliance Officer",
+        description: "Ensures regulatory adherence with AI-powered monitoring"
+      },
+      {
+        title: "Legal Document Synthesizer",
+        description: "Automates legal drafting and review using NLP"
+      }
+    ]
+  }
+];
+
 const REFUND_TIMELINE: RefundTimelineItem[] = [
   {
     period: 'After 1 Year',
@@ -75,7 +302,7 @@ const VcapPage: React.FC = () => {
       
       <main className="py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="max-w-6xl mx-auto space-y-12">
             {/* Overview Section */}
             <section className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
@@ -84,6 +311,36 @@ const VcapPage: React.FC = () => {
               <p className="text-lg text-gray-600">
                 VCAP is a full-time, paid remote program aimed at empowering talented individuals across India—especially from rural and underserved areas. Learn real skills, earn monthly income, and gain mentorship—all without ever stepping into a traditional office.
               </p>
+            </section>
+
+            {/* Departments and Roles Section */}
+            <section className="space-y-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
+                AI-Powered Career Paths
+              </h2>
+              
+              <div className="grid grid-cols-1 gap-8">
+                {DEPARTMENTS.map((dept, index) => (
+                  <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div className="bg-gradient-to-r from-purple-900 to-indigo-900 px-6 py-4">
+                      <h3 className="text-xl font-bold text-white">{dept.name}</h3>
+                    </div>
+                    <div className="p-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {dept.roles.map((role, roleIndex) => (
+                          <div 
+                            key={roleIndex}
+                            className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl p-6 transition-all duration-300 hover:shadow-md"
+                          >
+                            <h4 className="text-lg font-semibold text-gray-900 mb-2">{role.title}</h4>
+                            <p className="text-gray-600">{role.description}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </section>
 
             {/* Why Work From Home Section */}
@@ -139,87 +396,6 @@ const VcapPage: React.FC = () => {
                     </div>
                     <p className="text-gray-600">Women, caretakers, and differently-abled individuals often face hurdles commuting to jobs. Remote work offers them a level playing field.</p>
                   </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Why Choose VCAP Section */}
-            <section className="bg-white rounded-2xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                <Rocket className="w-6 h-6 mr-2 text-purple-600" />
-                Why Choose VCAP?
-              </h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div className="flex items-center p-4 bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl">
-                    <Home className="w-5 h-5 text-purple-600 mr-3" />
-                    <span className="text-gray-800">Work-from-home — Save on expenses</span>
-                  </div>
-                  <div className="flex items-center p-4 bg-gradient-to-r from-blue-50 to-green-50 rounded-xl">
-                    <Briefcase className="w-5 h-5 text-blue-600 mr-3" />
-                    <span className="text-gray-800">₹15,000 monthly stipend from Day 1</span>
-                  </div>
-                  <div className="flex items-center p-4 bg-gradient-to-r from-green-50 to-yellow-50 rounded-xl">
-                    <Code className="w-5 h-5 text-green-600 mr-3" />
-                    <span className="text-gray-800">Real-world tech projects</span>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-center p-4 bg-gradient-to-r from-yellow-50 to-red-50 rounded-xl">
-                    <Layout className="w-5 h-5 text-yellow-600 mr-3" />
-                    <span className="text-gray-800">Zero interviews — Entry based on passion</span>
-                  </div>
-                  <div className="flex items-center p-4 bg-gradient-to-r from-red-50 to-purple-50 rounded-xl">
-                    <Cpu className="w-5 h-5 text-red-600 mr-3" />
-                    <span className="text-gray-800">Peer network and mentorship</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* What You'll Work On Section */}
-            <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Domains</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
-                    Web & App Development
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                    UI/UX & Interaction Design
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-                    Cloud & DevOps
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
-                    Embedded Systems & Electronics
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                    AI, ML, & Conversational Tech
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                    Smart Hardware + CAD
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Roles</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="p-3 bg-purple-50 rounded-lg text-gray-700">Software Developer</div>
-                  <div className="p-3 bg-blue-50 rounded-lg text-gray-700">R&D Associate</div>
-                  <div className="p-3 bg-green-50 rounded-lg text-gray-700">Hardware Engineer</div>
-                  <div className="p-3 bg-yellow-50 rounded-lg text-gray-700">DevOps Assistant</div>
-                  <div className="p-3 bg-red-50 rounded-lg text-gray-700">UI/UX Designer</div>
-                  <div className="p-3 bg-indigo-50 rounded-lg text-gray-700">Project Trainee</div>
-                  <div className="p-3 bg-purple-50 rounded-lg text-gray-700">Quality Tester</div>
                 </div>
               </div>
             </section>
