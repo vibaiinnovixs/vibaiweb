@@ -12,33 +12,35 @@ export const NAV_ITEMS: NavItem[] = [
 ];
 
 export const DOMAINS: DomainItem[] = [
-  { icon: '🧩', title: 'Embedded Systems & Microcontrollers' },
-  { icon: '🔌', title: 'Smart IoT Devices & Sensors' },
-  { icon: '🧠', title: 'AI/ML & Predictive Logic Models' },
-  { icon: '📱', title: 'Mobile App Ecosystems (Android, iOS)' },
-  { icon: '🧾', title: 'UI/UX & Interface Psychology' },
-  { icon: '⚙️', title: 'Mechanical CAD & Product Design' },
-  { icon: '🖥', title: 'Web Technologies & Cloud Interfaces' },
-  { icon: '🧲', title: 'Electronic Circuit Design & Prototyping' },
-  { icon: '💬', title: 'Human-Computer Interaction & Voice Systems' },
-  { icon: '⚡', title: 'Low-Power Systems & Energy Optimization' },
+  { icon: '🧠', title: 'AI/ML & Intelligent Systems' },
+  { icon: '🤖', title: 'Conversational AI & NLP' },
+  { icon: '🔌', title: 'Edge AI & Smart IoT' },
+  { icon: '📱', title: 'Mobile & Cross-platform AI' },
+  { icon: '🎨', title: 'AI-Powered UI/UX Design' },
+  { icon: '⚙️', title: 'AI-Enhanced CAD & Engineering' },
+  { icon: '☁️', title: 'Cloud AI & MLOps' },
+  { icon: '🧲', title: 'Smart Circuit Design & Testing' },
+  { icon: '🌱', title: 'AI-Driven Hydroponics Systems' },
+  { icon: '📊', title: 'Predictive Analytics & Optimization' },
+  { icon: '🤝', title: 'Human-AI Collaboration Systems' },
+  { icon: '🔋', title: 'Sustainable Tech & Energy AI' },
 ];
 
 export const CAREER_PATHS: CareerPath[] = [
   { 
-    title: 'Design Division', 
-    description: 'UI/UX artists, modelers, graphics',
-    icon: '🎨'
+    title: 'AI Solutions Division', 
+    description: 'ML engineers, NLP specialists, AI architects',
+    icon: '🧠'
   },
   { 
-    title: 'Assembly Division', 
-    description: 'prototypers, PCB builders, QA',
-    icon: '🔧'
+    title: 'Smart Systems Division', 
+    description: 'IoT developers, automation engineers',
+    icon: '🤖'
   },
   { 
-    title: 'Field Division', 
-    description: 'onsite deployers, installers, testers',
-    icon: '🛠️'
+    title: 'Hydroponics Division', 
+    description: 'AI cultivation, plant analytics',
+    icon: '🌱'
   },
 ];
 
@@ -78,31 +80,32 @@ export const VCAP_HIGHLIGHTS: VcapHighlight[] = [
 ];
 
 export const COLLABORATION_TYPES: CollaborationType[] = [
-  { title: 'Contract-based Projects', icon: '🤝' },
-  { title: 'Institutional Training Tie-ups', icon: '👩‍🏫' },
-  { title: 'Hardware & Software Integration', icon: '🧑‍🔧' },
-  { title: 'Bulk Hiring of VCAP Graduates', icon: '💼' },
+  { title: 'AI Research Partnerships', icon: '🤝' },
+  { title: 'Smart Agriculture Solutions', icon: '🌱' },
+  { title: 'Intelligent Systems Integration', icon: '🤖' },
+  { title: 'AI Talent Development', icon: '👥' },
 ];
 
 export const VCAP_TECHNOLOGIES = [
-  'Software Development (Web, Mobile)',
-  'Cloud & DevOps',
-  'Electronics & Embedded Systems',
-  'AI, ML & Chatbots',
-  'UI/UX Design',
-  '3D Design & CAD Tools',
-  'Smart Hardware Integration',
+  'AI/ML Development',
+  'Smart IoT Systems',
+  'Hydroponics Technology',
+  'Cloud & MLOps',
+  'Intelligent UI/UX',
+  'Predictive Analytics',
+  'Edge Computing',
+  'Automation Systems',
 ];
 
 export const VCAP_ROLES = [
-  'Software Developer',
-  'Hardware Engineer',
-  'UI/UX Designer',
-  'AI Model Trainer',
-  'DevOps Assistant',
-  'R&D Associate',
-  'Quality Tester',
-  'Project Assistant',
+  'AI Solutions Architect',
+  'ML Engineer',
+  'Smart Systems Developer',
+  'Hydroponics AI Specialist',
+  'IoT Solutions Engineer',
+  'Data Intelligence Analyst',
+  'AI Research Associate',
+  'Automation Engineer',
 ];
 
 export const VCAP_FINANCIAL_COMPARISON = [
@@ -151,16 +154,16 @@ export const VCAP_FINANCIAL_COMPARISON = [
 ];
 
 export const VCAP_BENEFITS = [
-  'Stable income',
-  'Family support at home',
-  'Career growth through real experience',
-  'Better structure than gig or freelance jobs',
+  'Work with cutting-edge AI',
+  'Learn from industry experts',
+  'Build real-world solutions',
+  'Growth-focused environment',
 ];
 
 export const WHY_VCAP = [
   'Work From Home – No relocation struggles',
   'Fixed ₹15,000/month Salary – From Day 1',
-  'Hands-on Real Project Work',
-  'No Interview – Just 15 years of education',
-  'Strong Community and Mentorship',
+  'Hands-on AI Project Experience',
+  'No Interview – Just passion for tech',
+  'Strong Mentorship Community',
 ];

@@ -11,10 +11,10 @@ const Domains: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            We Explore & Innovate Across These Fields:
+            Innovating at the Intersection of AI & Technology
           </h2>
           <p className="text-lg text-gray-600">
-            Our diverse expertise allows us to tackle complex problems across multiple technology domains.
+            We're pioneering intelligent solutions across multiple domains, combining AI with traditional engineering to create smarter, more efficient systems.
           </p>
         </div>
         
@@ -50,7 +50,7 @@ const Domains: React.FC = () => {
         
         <div className="mt-16 text-center">
           <p className="text-gray-600 italic">
-            Our technology stack is constantly evolving to embrace the latest innovations and industry standards.
+            Our AI-enhanced technology stack evolves continuously, embracing cutting-edge innovations and industry standards.
           </p>
         </div>
       </div>
